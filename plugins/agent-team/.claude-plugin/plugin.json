@@ -1,0 +1,16 @@
+{
+  "name": "agent-team",
+  "description": "A seven-agent software delivery pipeline: Architect, Software Engineer, Reviewer, QA Test Generator, CI/CD Orchestrator, DevOps, and SRE/Monitoring agents, each with a defined input/output contract and clear handoffs between stages.",
+  "version": "1.0.0",
+  "author": { "name": "Arnav Shah" },
+  "keywords": ["agents", "subagents", "sdlc", "pipeline", "automation"],
+  "agents": [
+    "./agents/architect-agent.md",
+    "./agents/software-engineer-agent.md",
+    "./agents/reviewer-agent.md",
+    "./agents/qa-test-generator-agent.md",
+    "./agents/cicd-orchestrator-agent.md",
+    "./agents/devops-agent.md",
+    "./agents/sre-monitoring-agent.md"
+  ]
+}

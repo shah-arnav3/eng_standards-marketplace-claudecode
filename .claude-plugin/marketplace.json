@@ -1,0 +1,42 @@
+{
+  "name": "engineering-standards-marketplace",
+  "description": "A self-contained marketplace of skills and agents covering design paradigms, cross-language engineering practices, layered security scanning, and a full multi-agent software delivery pipeline.",
+  "owner": {
+    "name": "Arnav Shah",
+    "email": "shah.arnav3@northeastern.edu"
+  },
+  "metadata": {
+    "description": "Design paradigms, engineering practices, security scanning, and an agent-team pipeline",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "design-paradigms",
+      "source": "./plugins/design-paradigms",
+      "description": "Modern OOP, functional, structural, SQL, cloud, and React design paradigms with code examples.",
+      "category": "architecture",
+      "strict": false
+    },
+    {
+      "name": "engineering-practices",
+      "source": "./plugins/engineering-practices",
+      "description": "Concurrency, testing, git workflows, code quality, debugging, scoped changes, documentation, and performance.",
+      "category": "development",
+      "strict": false
+    },
+    {
+      "name": "security-scanning",
+      "source": "./plugins/security-scanning",
+      "description": "Backend, frontend, network, system, database, and dependency/supply-chain security scanning checklists.",
+      "category": "security",
+      "strict": false
+    },
+    {
+      "name": "agent-team",
+      "source": "./plugins/agent-team",
+      "description": "Architect, Software Engineer, Reviewer, QA Test Generator, CI/CD Orchestrator, DevOps, and SRE/Monitoring subagents.",
+      "category": "automation",
+      "strict": false
+    }
+  ]
+}
