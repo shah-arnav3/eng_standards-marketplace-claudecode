@@ -1,7 +1,7 @@
 {
   "name": "design-paradigms",
-  "description": "Modern design paradigms and architecture patterns across languages, runtimes, databases, and cloud providers: Java/C# OOP, Python functional/procedural, Node.js stateless services, Go/Rust structural design, SQL schema design, API design, Docker and container images, AWS/Azure/GCP cloud architecture, and functional React.",
-  "version": "1.1.0",
+  "description": "Modern design paradigms and architecture patterns across languages, runtimes, databases, and cloud providers: Java/C# OOP, Python functional/procedural, Node.js stateless services, Go/Rust structural design, SQL schema design, API design, Docker and container images, LLM application design, AWS/Azure/GCP cloud architecture, and functional React.",
+  "version": "1.2.0",
   "author": { "name": "Arnav Shah" },
   "keywords": [
     "architecture",
@@ -13,6 +13,7 @@
     "react",
     "api-design",
     "docker",
-    "containers"
+    "containers",
+    "llm"
   ]
 }
