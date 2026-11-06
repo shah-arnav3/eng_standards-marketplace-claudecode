@@ -1,6 +1,20 @@
-# Rust: ownership, traits, errors, layout
+---
+name: rust-structural
+description: Modern structural and procedural Rust design — ownership and borrowing, traits instead of inheritance, static vs. dynamic dispatch, Result/Option error handling with thiserror/anyhow, and module layout. Use whenever writing, reviewing, or architecting Rust code, designing structs and traits, working through the borrow checker, or the user mentions Rust ownership, lifetimes, or traits.
+---
 
-Assumes the shared principles in `../SKILL.md`.
+# Rust Structural & Procedural Design
+
+Rust rejects classical inheritance in favor of composition and pushes error handling into the type system rather than exceptions.
+
+## Core principles
+
+1. **No inheritance — compose types and satisfy small traits.**
+2. **Errors are values, not exceptions.** Every fallible operation returns its failure explicitly; there is no `try/catch` control flow to reason about.
+3. **Small traits defined by the consumer, not the producer.**
+4. **Explicit over implicit.** No hidden allocations, no hidden control flow, no magic.
+
+Layering: domain types and business rules with no I/O at the center, use-case orchestration around them, concrete adapters (database, HTTP clients) at the edge, and a `main.rs` that only wires things together.
 
 ## Ownership and borrowing
 
@@ -86,8 +100,10 @@ src/
   main.rs       wiring only
 ```
 
-## Pitfalls
+## Common pitfalls
 
 - Excessive `.clone()` to silence the borrow checker instead of restructuring ownership.
 - `unsafe` blocks used to avoid understanding a lifetime issue rather than for a genuine, documented invariant.
 - Large `match` on error kinds via string comparison instead of typed variants.
+- Reaching for a trait before there is a second real implementation or a test double that needs one.
+- Swallowing an error value instead of returning or handling it — the type system makes failures visible only if you don't discard them.

@@ -17,8 +17,9 @@ Versions are per plugin. The marketplace `metadata.version` tracks the latest re
 
 ### design-paradigms 1.1.0
 - Added `api-design`.
-- Split `go-rust-structural` and `java-csharp-oop` into shared principles plus
-  per-language reference files, so only the relevant language loads.
+- Replaced `go-rust-structural` with `go-structural` and `rust-structural`, and
+  `java-csharp-oop` with `java-oop` and `csharp-oop`, so each language triggers and
+  loads on its own.
 
 ### engineering-practices 1.1.0
 - Added `observability` and `debloating`.

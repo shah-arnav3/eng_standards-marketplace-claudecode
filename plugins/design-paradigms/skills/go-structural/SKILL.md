@@ -1,6 +1,20 @@
-# Go: interfaces, composition, errors, layout
+---
+name: go-structural
+description: Modern structural and procedural Go design — composition via small consumer-defined interfaces, errors as values with %w wrapping, and cmd/internal package layout. Use whenever writing, reviewing, or architecting Go code, designing Go structs and interfaces, or the user mentions Go interfaces, Go error handling, or Go project layout.
+---
 
-Assumes the shared principles in `../SKILL.md`.
+# Go Structural & Procedural Design
+
+Go rejects classical inheritance in favor of composition and pushes error handling into the type system rather than exceptions.
+
+## Core principles
+
+1. **No inheritance — compose types and satisfy small interfaces.**
+2. **Errors are values, not exceptions.** Every fallible operation returns its failure explicitly; there is no `try/catch` control flow to reason about.
+3. **Small interfaces defined by the consumer, not the producer.** "Accept interfaces, return structs."
+4. **Explicit over implicit.** No hidden allocations, no hidden control flow, no magic.
+
+Layering: domain types and business rules with no I/O at the center, use-case orchestration around them, concrete adapters (database, HTTP clients) at the edge, and an entry point that only wires things together.
 
 ## Interfaces and composition
 
@@ -71,8 +85,10 @@ func (r *SQLOrderRepository) FindByID(ctx context.Context, id string) (Order, er
 
 Keep business logic under `/internal` so it cannot be imported by other modules — Go enforces this at compile time.
 
-## Pitfalls
+## Common pitfalls
 
 - Returning `interface{}`/`any` instead of a concrete type or a small typed interface.
 - Ignoring returned errors (`_, _ = f()`).
 - Defining interfaces in the producer package with many methods "just in case."
+- Reaching for an interface before there is a second real implementation or a test double that needs one.
+- Swallowing an error value instead of returning or handling it — the type system makes failures visible only if you don't discard them.

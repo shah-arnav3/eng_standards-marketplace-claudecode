@@ -91,9 +91,9 @@ a `grep` for `kubectl apply`) also prompts. The patterns live in
 
 - No emojis, no decorative dividers, no filler — every SKILL.md is dense, checklist-driven
   reference material.
-- Skills stay under the ~500-line guideline. Skills that span several providers or
-  languages (`cloud-design`, `go-rust-structural`, `java-csharp-oop`) keep shared
-  principles in `SKILL.md` and put each provider or language in a `references/` file,
-  so only the relevant one loads into context.
+- Skills stay under the ~500-line guideline. Each language has its own skill (`go-structural`,
+  `rust-structural`, `java-oop`, `csharp-oop`), so only the language in play loads.
+  `cloud-design` keeps shared principles in `SKILL.md` and puts each provider in a
+  `references/` file for the same reason.
 - Each skill states precisely when it should trigger, so Claude consults it for
   substantive tasks without over-triggering on trivial ones.
