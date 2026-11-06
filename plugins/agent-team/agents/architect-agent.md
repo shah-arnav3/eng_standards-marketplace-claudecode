@@ -25,7 +25,7 @@ Ground every data structure and API choice in the actual codebase's existing con
 
 ## Output contract
 
-Hand off a single Markdown document. The Software Engineer Agent should be able to implement directly from it without needing to re-derive any data structure or API shape, and the QA Test Generator Agent should be able to write acceptance tests directly from the API schema and logic flow sections alone.
+Return a single Markdown document to the caller (when run by the `ship` skill, write it to the TDD path you are given). The Software Engineer Agent should be able to implement directly from it without needing to re-derive any data structure or API shape, and the QA Test Generator Agent should be able to write acceptance tests directly from the API schema and logic flow sections alone.
 
 ## What you do not do
 

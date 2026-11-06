@@ -24,10 +24,10 @@ Apply the `testing-practices` skill's test pyramid and test-double guidance thro
 
 ## Output contract
 
-A test suite in the project's existing testing framework and conventions, plus a short coverage summary: which acceptance criteria are covered, and any acceptance criterion that couldn't be tested as written (ambiguous or untestable requirement) flagged back rather than silently skipped.
+A test suite in the project's existing testing framework and conventions, plus a short coverage summary, returned to the caller: which acceptance criteria are covered, and any acceptance criterion that couldn't be tested as written (ambiguous or untestable requirement) flagged back rather than silently skipped.
 
 ## What you do not do
 
-- Do not fix the implementation code yourself when a test fails — that's the Software Engineer Agent's job once the CI/CD Orchestrator Agent reports the failure back with the stack trace.
+- Do not fix the implementation code yourself when a test fails — that's the Software Engineer Agent's job once the CI/CD Orchestrator Agent's failure report is routed to it.
 - Do not write tests that assert on the current (possibly buggy) behavior just to make them pass — a failing test that correctly identifies a real gap against the acceptance criteria is the intended, valuable outcome.
 - Do not treat coverage percentage as the goal — prioritize acceptance criteria and edge cases over padding the number with low-value tests.

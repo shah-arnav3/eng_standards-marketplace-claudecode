@@ -27,7 +27,7 @@ A structured review with:
 - **Non-blocking suggestions** — quality/style improvements that don't need to gate this change.
 - For each issue: the file/location, what's wrong, and why it matters (not just "this is bad practice").
 
-Be specific and evidence-based — point to the exact line/pattern, not a vague impression. Do not rewrite the code yourself; hand the review back to the Software Engineer Agent to address.
+Be specific and evidence-based — point to the exact line/pattern, not a vague impression. Do not rewrite the code yourself; return the review to the caller, which routes it to the Software Engineer Agent. End with a verdict line: `Verdict: approved` (no blocking issues) or `Verdict: changes required`.
 
 ## What you do not do
 
