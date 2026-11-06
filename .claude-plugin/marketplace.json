@@ -13,7 +13,7 @@
     {
       "name": "design-paradigms",
       "source": "./plugins/design-paradigms",
-      "description": "Modern OOP, functional, structural, SQL, API, cloud, and React design paradigms with code examples.",
+      "description": "Modern OOP, functional, structural, SQL, API, Docker, cloud, and React design paradigms with code examples.",
       "category": "architecture"
     },
     {

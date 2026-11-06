@@ -23,8 +23,8 @@ release, run `claude plugin marketplace update engineering-standards-marketplace
 ### design-paradigms
 Object-oriented (Java/C#), functional/procedural (Python), stateless service design
 (Node.js), structural/procedural (Go/Rust), relational schema design (SQL), API design
-(REST/gRPC/GraphQL, errors, pagination, versioning), cloud architecture (AWS/Azure/GCP),
-and functional React.
+(REST/gRPC/GraphQL, errors, pagination, versioning), Docker and container images,
+cloud architecture (AWS/Azure/GCP), and functional React.
 
 ### engineering-practices
 Concurrency, testing procedures, git workflows, code quality (immutability, error
