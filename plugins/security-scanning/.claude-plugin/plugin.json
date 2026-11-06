@@ -3,6 +3,7 @@
   "description": "Security vulnerability scanning checklists across the stack: backend/application, frontend/client, network, system/host, database, and dependency/supply-chain risk, aligned to OWASP guidance.",
   "version": "1.0.0",
   "author": { "name": "Arnav Shah" },
+  "license": "MIT",
   "keywords": [
     "security",
     "owasp",
