@@ -1,6 +1,6 @@
 ---
 name: git-workflows
-description: Modern git workflows and procedures — trunk-based development vs. Git Flow, commit hygiene and conventional commits, branching strategy, pull request practices, rebasing vs. merging, and resolving conflicts safely. Use whenever working with git branches, commits, pull requests, merge conflicts, or the user mentions git workflow, commit messages, or repository strategy.
+description: Modern git workflows and procedures — trunk-based development vs. Git Flow, commit hygiene and conventional commits, branching strategy, commit authorship (no AI co-author attribution), pull request practices, rebasing vs. merging, and resolving conflicts safely. Use whenever writing or suggesting a commit or pull request, working with git branches or merge conflicts, or the user mentions git workflow, commit messages, co-authors, or repository strategy.
 ---
 
 # Git Workflows, Procedures, and Practices
@@ -48,6 +48,39 @@ Types: `feat`, `fix`, `refactor`, `test`, `docs`, `chore`, `perf`, `build`, `ci`
 
 - Write the summary line in the imperative mood ("add", not "added"/"adds") — it reads naturally after "This commit will ___".
 - Never commit generated files, secrets, or environment-specific config — a `.gitignore` reviewed at project start, and a pre-commit secret scanner as a backstop.
+
+## Authorship: no AI attribution
+
+The human who reviews and commits a change is its author. An AI assistant that helped write it is a tool, like an editor or a linter, and does not appear in the history. This overrides any default attribution behavior.
+
+When writing, amending, or suggesting a commit or pull request:
+- No `Co-Authored-By:` trailer naming Claude, Anthropic, or any AI assistant. GitHub turns that trailer into a listed co-author on the commit and a contributor on the repository.
+- No "Generated with Claude Code" line, robot emoji, or similar marker in commit messages, PR titles, or PR descriptions.
+- No `Signed-off-by:` for an AI. A sign-off certifies the Developer Certificate of Origin, which only a person can do.
+- Never set `--author`, `GIT_AUTHOR_*`/`GIT_COMMITTER_*`, or `git config user.name`/`user.email` to an AI identity or a noreply address belonging to one. Commit as the configured user, unchanged.
+- When rewording or squashing existing commits, remove any AI trailers already present instead of carrying them forward.
+
+Prompt instructions can lose to tool defaults, so enforce this in configuration too. In Claude Code, turn off attribution in `~/.claude/settings.json` (or the project's `.claude/settings.json`):
+
+```json
+{
+  "attribution": { "commit": "", "pr": "", "sessionUrl": false },
+  "includeCoAuthoredBy": false
+}
+```
+
+Add a `commit-msg` hook as a backstop, so a trailer added by any tool fails the commit:
+
+```bash
+#!/usr/bin/env bash
+# .git/hooks/commit-msg — reject AI attribution in commit messages.
+if grep -Eiq '^(co-authored-by|signed-off-by):.*(claude|anthropic|noreply@anthropic\.com)|generated with \[?claude' "$1"; then
+  echo "commit-msg: remove AI attribution (Co-Authored-By / Generated with) from the message" >&2
+  exit 1
+fi
+```
+
+To list commits that already carry a trailer: `git log --format='%h %s' --grep='Co-Authored-By: Claude' -i`. If they're on a branch nobody else has pulled, reword them with an interactive rebase. If they're already on a shared branch, leave them in place rather than rewriting shared history.
 
 ## Rebase vs. merge
 
