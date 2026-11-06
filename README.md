@@ -1,8 +1,8 @@
 # Engineering Standards Marketplace
 
-A Claude Code plugin marketplace covering four areas: design paradigms, cross-language
-engineering practices, layered security scanning, and a seven-agent software delivery
-pipeline. Every skill is written for modern coding standards, uses generalized code
+A Claude Code plugin marketplace covering five areas: design paradigms, cross-language
+engineering practices, layered security scanning, a seven-agent software delivery
+pipeline, and Claude Code session efficiency. Every skill is written for modern coding standards, uses generalized code
 examples, and is organized so Claude reads only what a given task needs.
 
 ## Install
@@ -13,9 +13,10 @@ claude plugin install design-paradigms@engineering-standards-marketplace
 claude plugin install engineering-practices@engineering-standards-marketplace
 claude plugin install security-scanning@engineering-standards-marketplace
 claude plugin install agent-team@engineering-standards-marketplace
+claude plugin install session-efficiency@engineering-standards-marketplace
 ```
 
-Or install all four from the `/plugin` panel inside a session. To pick up a new
+Or install all five from the `/plugin` panel inside a session. To pick up a new
 release, run `claude plugin marketplace update engineering-standards-marketplace`.
 
 ## Plugins
@@ -24,7 +25,8 @@ release, run `claude plugin marketplace update engineering-standards-marketplace
 Object-oriented (Java/C#), functional/procedural (Python), stateless service design
 (Node.js), structural/procedural (Go/Rust), relational schema design (SQL), API design
 (REST/gRPC/GraphQL, errors, pagination, versioning), Docker and container images,
-cloud architecture (AWS/Azure/GCP), and functional React.
+LLM application design (caching, model and effort routing, agent memory), cloud
+architecture (AWS/Azure/GCP), and functional React.
 
 ### engineering-practices
 Concurrency, testing procedures, git workflows, code quality (immutability, error
@@ -36,6 +38,14 @@ dependencies with evidence).
 ### security-scanning
 Vulnerability scanning checklists for backend, frontend, network, system/host,
 database, and dependency/supply-chain risk — aligned to OWASP Top 10 / ASVS.
+
+### session-efficiency
+How Claude works inside a Claude Code session, as opposed to the code it writes:
+token-efficient habits (narrow reads, subagent delegation, filtered output, warm prompt
+cache, trimming always-on context), task-specific model and effort selection for the
+main session, subagents, and skills, and session memory (lean CLAUDE.md and rules,
+auto memory hygiene, compaction, handoff documents, resuming). Guidance for LLM
+applications you build lives in `design-paradigms` under `llm-applications`.
 
 ### agent-team
 Seven subagents forming a delivery pipeline, each with an explicit input/output
