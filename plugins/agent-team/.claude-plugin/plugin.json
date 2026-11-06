@@ -1,7 +1,7 @@
 {
   "name": "agent-team",
   "description": "A seven-agent software delivery pipeline (Architect, Software Engineer, Reviewer, QA Test Generator, CI/CD Orchestrator, DevOps, SRE/Monitoring), a /ship skill that orchestrates it through file-based handoffs with retry limits, and a hook that requires human approval before any deploy or rollback.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": { "name": "Arnav Shah" },
   "keywords": [
     "agents",
