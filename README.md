@@ -84,8 +84,8 @@ a `grep` for `kubectl apply`) also prompts. The patterns live in
   directory. CI runs it on every plugin, plus `tests/confirm-deploy.test.sh` for the hook.
 - Skills and agents are auto-discovered from each plugin's `skills/` and `agents/`
   folders; adding one doesn't require a manifest change.
-- Bump the plugin's `version` in its `plugin.json` and add a `CHANGELOG.md` entry for
-  any change users should receive — installed copies update only when the version changes.
+- Bump the plugin's `version` in its `plugin.json` for any change users should
+  receive — installed copies update only when the version changes.
 
 ## Design notes
 
