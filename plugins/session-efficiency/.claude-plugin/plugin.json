@@ -1,7 +1,7 @@
 {
   "name": "session-efficiency",
-  "description": "Skills that make Claude Code sessions cheaper and longer-lived: token-efficient working habits, task-specific model and effort selection for the main thread and subagents, and session memory practices (CLAUDE.md, auto memory, compaction, handoffs).",
-  "version": "1.0.0",
+  "description": "Skills that make Claude Code sessions cheaper, longer-lived, and more reliable: token-efficient working habits, task-specific model and effort selection, session memory practices (CLAUDE.md, auto memory, compaction, handoffs), docs-first discipline, autonomous execution, and structured end-of-task reports.",
+  "version": "1.1.0",
   "author": { "name": "Arnav Shah" },
   "license": "MIT",
   "keywords": [
@@ -10,6 +10,9 @@
     "model-selection",
     "subagents",
     "memory",
-    "compaction"
+    "compaction",
+    "documentation",
+    "autonomy",
+    "reporting"
   ]
 }

@@ -44,8 +44,12 @@ How Claude works inside a Claude Code session, as opposed to the code it writes:
 token-efficient habits (narrow reads, subagent delegation, filtered output, warm prompt
 cache, trimming always-on context), task-specific model and effort selection for the
 main session, subagents, and skills, and session memory (lean CLAUDE.md and rules,
-auto memory hygiene, compaction, handoff documents, resuming). Guidance for LLM
-applications you build lives in `design-paradigms` under `llm-applications`.
+auto memory hygiene, compaction, handoff documents, resuming). It also covers agent
+discipline: reading current official docs before relying on memory (`read-the-docs`),
+working through ordinary ambiguity when told to keep going (`plow-ahead`), and a
+structured end-of-task report with results, actions taken, open findings,
+clarifications, and next steps for you and for Claude (`work-report`). Guidance for
+LLM applications you build lives in `design-paradigms` under `llm-applications`.
 
 ### agent-team
 Seven subagents forming a delivery pipeline, each with an explicit input/output

@@ -37,7 +37,7 @@
     {
       "name": "session-efficiency",
       "source": "./plugins/session-efficiency",
-      "description": "Token-efficient habits, per-task model and effort selection, and session memory practices for Claude Code.",
+      "description": "Token-efficient habits, per-task model and effort selection, session memory, docs-first discipline, autonomous execution, and structured work reports for Claude Code.",
       "category": "productivity"
     }
   ]
