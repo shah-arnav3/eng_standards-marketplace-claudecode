@@ -7,36 +7,32 @@
   },
   "metadata": {
     "description": "Design paradigms, engineering practices, security scanning, and an agent-team pipeline",
-    "version": "1.0.0"
+    "version": "1.1.0"
   },
   "plugins": [
     {
       "name": "design-paradigms",
       "source": "./plugins/design-paradigms",
-      "description": "Modern OOP, functional, structural, SQL, cloud, and React design paradigms with code examples.",
-      "category": "architecture",
-      "strict": false
+      "description": "Modern OOP, functional, structural, SQL, API, cloud, and React design paradigms with code examples.",
+      "category": "architecture"
     },
     {
       "name": "engineering-practices",
       "source": "./plugins/engineering-practices",
-      "description": "Concurrency, testing, git workflows, code quality, debugging, scoped changes, documentation, and performance.",
-      "category": "development",
-      "strict": false
+      "description": "Concurrency, testing, git workflows, code quality, debugging, scoped changes, documentation, performance, observability, and debloating.",
+      "category": "development"
     },
     {
       "name": "security-scanning",
       "source": "./plugins/security-scanning",
       "description": "Backend, frontend, network, system, database, and dependency/supply-chain security scanning checklists.",
-      "category": "security",
-      "strict": false
+      "category": "security"
     },
     {
       "name": "agent-team",
       "source": "./plugins/agent-team",
-      "description": "Architect, Software Engineer, Reviewer, QA Test Generator, CI/CD Orchestrator, DevOps, and SRE/Monitoring subagents.",
-      "category": "automation",
-      "strict": false
+      "description": "Seven-agent delivery pipeline with a /ship orchestrator and a human-approval gate on deploys and rollbacks.",
+      "category": "automation"
     }
   ]
 }

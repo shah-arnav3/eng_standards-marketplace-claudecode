@@ -1,17 +1,17 @@
 {
   "name": "engineering-practices",
-  "description": "Cross-language engineering practices: concurrency, testing, git workflows, code quality (immutability/error handling/validation), debugging, scoped and grounded code changes, documentation, and performance optimization.",
-  "version": "1.0.0",
+  "description": "Cross-language engineering practices: concurrency, testing, git workflows, code quality (immutability/error handling/validation), debugging, scoped and grounded code changes, documentation, performance optimization, observability, and debloating.",
+  "version": "1.1.0",
   "author": { "name": "Arnav Shah" },
-  "keywords": ["concurrency", "testing", "git", "code-quality", "debugging", "performance", "documentation"],
-  "skills": [
-    "./skills/concurrency",
-    "./skills/testing-practices",
-    "./skills/git-workflows",
-    "./skills/code-quality",
-    "./skills/debugging",
-    "./skills/scoped-changes",
-    "./skills/documentation-practices",
-    "./skills/performance-optimization"
+  "keywords": [
+    "concurrency",
+    "testing",
+    "git",
+    "code-quality",
+    "debugging",
+    "performance",
+    "documentation",
+    "observability",
+    "debloating"
   ]
 }
