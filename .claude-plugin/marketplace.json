@@ -1,13 +1,13 @@
 {
   "name": "engineering-standards-marketplace",
-  "description": "A self-contained marketplace of skills and agents covering design paradigms, cross-language engineering practices, layered security scanning, and a full multi-agent software delivery pipeline.",
+  "description": "A self-contained marketplace of skills and agents covering design paradigms, cross-language engineering practices, layered security scanning, a full multi-agent software delivery pipeline, and Claude Code session efficiency.",
   "owner": {
     "name": "Arnav Shah",
     "email": "shah.arnav3@northeastern.edu"
   },
   "metadata": {
     "description": "Design paradigms, engineering practices, security scanning, and an agent-team pipeline",
-    "version": "1.1.0"
+    "version": "1.2.0"
   },
   "plugins": [
     {
@@ -33,6 +33,12 @@
       "source": "./plugins/agent-team",
       "description": "Seven-agent delivery pipeline with a /ship orchestrator and a human-approval gate on deploys and rollbacks.",
       "category": "automation"
+    },
+    {
+      "name": "session-efficiency",
+      "source": "./plugins/session-efficiency",
+      "description": "Token-efficient habits, per-task model and effort selection, and session memory practices for Claude Code.",
+      "category": "productivity"
     }
   ]
 }
